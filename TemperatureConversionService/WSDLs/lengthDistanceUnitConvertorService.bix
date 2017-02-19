@@ -25,12 +25,15 @@
         <tran:URI>
             <env:value>http://www.webservicex.net/length.asmx</env:value>
         </tran:URI>
+        <tran:URI>
+            <env:value>http://127.0.0.1:7101/ConversionServices-LocalLengthUnitService-context-root/lengthUnitSoap</env:value>
+        </tran:URI>
         <tran:outbound-properties>
             <tran:load-balancing-algorithm>round-robin</tran:load-balancing-algorithm>
             <tran:retry-count>0</tran:retry-count>
             <tran:retry-interval>30</tran:retry-interval>
         </tran:outbound-properties>
-        <tran:provider-specific>
+        <tran:provider-specific xsi:type="http:HttpEndPointConfiguration">
             <http:outbound-properties>
                 <http:request-method>POST</http:request-method>
                 <http:timeout>0</http:timeout>
